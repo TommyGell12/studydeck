@@ -54,3 +54,29 @@ FUNCTION cards(course, limit)
         ADD card to results
 
     RETURN 200, results as JSON
+
+## Tool readiness — November 6, 2026
+
+- Project folder: /home/tommy/installfest-lab/studydeck
+- Environment: WSL Ubuntu with VS Code
+- VS Code: 1.140.0
+- Python: 3.14.4
+- Node.js: v22.22.1
+- npm: 9.2.0
+- Git: 2.53.0
+- GitHub CLI: 2.46.0, authenticated as TommyGell12
+- Docker CLI and engine: 26.0.0
+- Docker Compose: v2.26.1-desktop.1
+
+### Checks completed
+
+- Docker engine responds without sudo after adding my user to
+  the docker group and restarting WSL.
+- GitHub repository created and main pushed successfully.
+- Remote upstream configured; main tracks upstream/main.
+- The deck alias opens the project folder.
+- The gs alias runs git status.
+
+### Repository
+
+https://github.com/TommyGell12/studydeck

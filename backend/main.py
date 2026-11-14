@@ -44,6 +44,12 @@ CARDS = [
 def cards(course: Optional[str] = None, limit: int = 5):
     if not course:
         raise HTTPException(status_code=400, detail="Please specify a course.")
+    courses = sorted({card["course"] for card in CARDS})
+    if course not in courses:
+        raise HTTPException(
+        status_code=404,
+        detail=f"Unknown course: {course}. Available courses: {', '.join(courses)}",
+    )
     if (limit < 1 ):
         raise HTTPException(status_code=400, detail="Please request at least 1 card.")
     filtered_cards = [card for card in CARDS if card["course"] == course]
